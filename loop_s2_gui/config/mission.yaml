@@ -1,0 +1,24 @@
+# A course in the shape of the URC Autonomous Navigation Mission: seven legs,
+# two of them GNSS-only waypoints, three AR-tagged posts and two unmarked
+# ground objects. Coordinates get less exact as the mission goes on, which is
+# why the later legs have a wider tolerance: the rules put the later targets
+# some distance from the coordinates the team is given.
+#
+# The origin is the base station. Positions are metres east and north of it,
+# and the console turns them into coordinates for display.
+
+mission:
+  name: Autonomous Navigation Mission
+  time_limit_s: 1800.0
+  origin:
+    latitude: 38.4064
+    longitude: -110.7919
+
+legs:
+  - {label: "Leg 1 GNSS", type: gnss, east_m: 42.0, north_m: 55.0, tolerance_m: 3.0}
+  - {label: "Leg 2 GNSS", type: gnss, east_m: -60.0, north_m: 95.0, tolerance_m: 3.0}
+  - {label: "Leg 3 post", type: post, east_m: 120.0, north_m: 140.0, tolerance_m: 2.0}
+  - {label: "Leg 4 post", type: post, east_m: -140.0, north_m: 210.0, tolerance_m: 2.0}
+  - {label: "Leg 5 post", type: post, east_m: 60.0, north_m: 280.0, tolerance_m: 2.0}
+  - {label: "Leg 6 mallet", type: object, east_m: -95.0, north_m: 330.0, tolerance_m: 2.0}
+  - {label: "Leg 7 bottle", type: object, east_m: 150.0, north_m: 380.0, tolerance_m: 2.0}
